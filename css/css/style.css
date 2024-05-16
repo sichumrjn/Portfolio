@@ -550,8 +550,8 @@ a {
       height: 100vh;
       min-height: 650px; }
   .cover-v1 .heading {
-    font-size: 5rem;
-    font-weight: 900;
+    font-size: 3rem;
+    font-weight: 700;
     color: #fff; }
     @media (max-width: 991.98px) {
       .cover-v1 .heading {
@@ -571,6 +571,8 @@ a {
     @media (max-width: 991.98px) {
       .cover-v1 .subheading {
         font-size: 24px; } }
+   
+      
 
 .mouse-wrap {
   position: relative;
@@ -1491,3 +1493,8 @@ span.error {
     height: 100%;
     border: 1px solid red;
     background: #000; }
+
+    .cover-v1 .subheading {
+      font-size: 0px;
+      color: #fff;
+  }
