@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alert system — Sichu Maharjan</title>
+  <meta name="description" content="Case study: Designing a notification and threshold-based alert system for proactive monitoring.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="container">
+      <a href="../index.html" class="nav-logo" aria-label="Sichu Maharjan — Home">sichu<span>.</span></a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-links">
+        <a href="../index.html#projects">Projects</a>
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#skills">Skills</a>
+        <a href="../index.html#contact">Contact</a>
+        <a href="https://drive.google.com/file/d/1RIDO3iiSiJnvqMOIWYAjDAUAJXNLIBix/view?usp=sharing" target="_blank" rel="noopener" class="btn btn-primary nav-resume">Resume</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="cs-page">
+    <div class="container">
+      <a href="../index.html#projects" class="cs-back">&larr; Back to projects</a>
+
+      <header class="cs-hero">
+        <div class="cs-num">07</div>
+        <h1 class="cs-title">Alert system</h1>
+        <p class="cs-subtitle">Designing a notification and threshold-based alert system for proactive monitoring.</p>
+        <div class="cs-tags">
+          <span class="tag">Notifications</span>
+          <span class="tag">Thresholds</span>
+          <span class="tag">UXCam</span>
+        </div>
+      </header>
+
+      <div class="cs-cover">
+        <span class="placeholder-icon">Cover image placeholder</span>
+      </div>
+
+      <div class="cs-content">
+        <section class="cs-section">
+          <h2>Overview</h2>
+          <p>UXCam's analytics platform collects continuous data about user behavior, but teams couldn't act on it proactively — they had to manually check dashboards to spot issues. The alert system brings critical changes to users' attention automatically, turning reactive monitoring into proactive awareness.</p>
+        </section>
+
+        <section class="cs-section">
+          <h2>Problem</h2>
+          <p>Without alerts, teams were missing critical signals:</p>
+          <ul>
+            <li>Crash rate spikes went unnoticed until someone happened to check</li>
+            <li>Funnel drop-off increases weren't caught early enough to act on</li>
+            <li>Teams lacked a way to set thresholds for metrics they cared about</li>
+            <li>No notification infrastructure existed — everything was pull-based</li>
+          </ul>
+        </section>
+
+        <section class="cs-section">
+          <h2>Process</h2>
+          <p>I started by interviewing power users about what they wished they could be notified about and when. This revealed a spectrum from simple threshold alerts ("notify me when crash rate exceeds 2%") to complex conditional alerts ("notify me when session count drops 20% compared to last week, on iOS only").</p>
+          <p>The design challenge was creating a system flexible enough for power users without overwhelming teams who just wanted basic monitoring.</p>
+        </section>
+
+        <section class="cs-section">
+          <h2>Solution</h2>
+          <p>The alert system uses a layered approach: preset templates for common alerts (crash spikes, traffic drops) and a custom builder for advanced configurations. Each alert includes metric selection, condition logic, threshold values, comparison windows, and delivery channels (email, Slack, in-app). A preview mode shows historical data to help users set meaningful thresholds.</p>
+        </section>
+
+        <section class="cs-section">
+          <h2>Outcome</h2>
+          <p>The alert system shifted teams from reactive to proactive monitoring. Usage data showed that teams with active alerts responded to issues faster, and the preset templates made adoption easy even for teams new to monitoring.</p>
+        </section>
+      </div>
+
+      <nav class="cs-nav" aria-label="Case study navigation">
+        <a href="page-definition.html" class="cs-nav-link">
+          <span class="cs-nav-label">Previous</span>
+          <span class="cs-nav-title">Page definition</span>
+        </a>
+        <div></div>
+      </nav>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p class="footer-credit">&copy; 2025 Sichu Maharjan</p>
+      <a href="#" class="back-to-top" aria-label="Back to top">&uarr; Top</a>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

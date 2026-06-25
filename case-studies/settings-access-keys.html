@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project & environment settings + access keys — Sichu Maharjan</title>
+  <meta name="description" content="Case study: Designing the settings architecture and access key management for a multi-environment product setup.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="container">
+      <a href="../index.html" class="nav-logo" aria-label="Sichu Maharjan — Home">sichu<span>.</span></a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-links">
+        <a href="../index.html#projects">Projects</a>
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#skills">Skills</a>
+        <a href="../index.html#contact">Contact</a>
+        <a href="https://drive.google.com/file/d/1RIDO3iiSiJnvqMOIWYAjDAUAJXNLIBix/view?usp=sharing" target="_blank" rel="noopener" class="btn btn-primary nav-resume">Resume</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="cs-page">
+    <div class="container">
+      <a href="../index.html#projects" class="cs-back">&larr; Back to projects</a>
+
+      <header class="cs-hero">
+        <div class="cs-num">03</div>
+        <h1 class="cs-title">Project & environment settings + access keys</h1>
+        <p class="cs-subtitle">Designing the settings architecture and access key management for a multi-environment product setup.</p>
+        <div class="cs-tags">
+          <span class="tag">IA</span>
+          <span class="tag">Spec</span>
+          <span class="tag">Systems</span>
+          <span class="tag">UXCam</span>
+        </div>
+      </header>
+
+      <div class="cs-cover">
+        <span class="placeholder-icon">Cover image placeholder</span>
+      </div>
+
+      <div class="cs-content">
+        <section class="cs-section">
+          <h2>Overview</h2>
+          <p>As UXCam's product grew to support multiple projects and environments, the existing settings structure couldn't scale. This project redesigned how users manage project settings, environment configurations, and API access keys within a unified, intuitive interface.</p>
+        </section>
+
+        <section class="cs-section">
+          <h2>Problem</h2>
+          <p>Settings were scattered across different sections with inconsistent patterns:</p>
+          <ul>
+            <li>Users struggled to find specific settings as the product expanded</li>
+            <li>Access key management was buried and lacked clear environment separation</li>
+            <li>No clear hierarchy between organization, project, and environment-level settings</li>
+            <li>The settings UI didn't scale with the growing number of configuration options</li>
+          </ul>
+        </section>
+
+        <section class="cs-section">
+          <h2>Process</h2>
+          <p>I conducted a settings audit to catalog every configuration option, then worked with engineering to understand the technical hierarchy. Through card sorting exercises and information architecture analysis, I established a clear mental model for how settings should be organized.</p>
+          <p>I created detailed specs for each settings section, documenting interactions, edge cases, and access control considerations.</p>
+        </section>
+
+        <section class="cs-section">
+          <h2>Solution</h2>
+          <p>The redesigned settings follow a clear three-level hierarchy: organization → project → environment. Access keys are prominently placed with clear environment labels, copy-to-clipboard functionality, and rotation workflows. The sidebar navigation makes the full settings scope visible at a glance.</p>
+        </section>
+
+        <section class="cs-section">
+          <h2>Outcome</h2>
+          <p>The new settings architecture reduced support tickets related to configuration issues. Users could find and manage their settings independently, and the scalable structure accommodated new settings as the product continued to grow.</p>
+        </section>
+      </div>
+
+      <nav class="cs-nav" aria-label="Case study navigation">
+        <a href="coded-prototype.html" class="cs-nav-link">
+          <span class="cs-nav-label">Previous</span>
+          <span class="cs-nav-title">Coded prototype of signup experience</span>
+        </a>
+        <a href="structural-model-shift.html" class="cs-nav-link cs-nav-link--next">
+          <span class="cs-nav-label">Next</span>
+          <span class="cs-nav-title">Structural model shift</span>
+        </a>
+      </nav>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p class="footer-credit">&copy; 2025 Sichu Maharjan</p>
+      <a href="#" class="back-to-top" aria-label="Back to top">&uarr; Top</a>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

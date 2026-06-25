@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page definition — Sichu Maharjan</title>
+  <meta name="description" content="Case study: Creating the rules-based UX for defining and managing page structures in web analytics.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="container">
+      <a href="../index.html" class="nav-logo" aria-label="Sichu Maharjan — Home">sichu<span>.</span></a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-links">
+        <a href="../index.html#projects">Projects</a>
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#skills">Skills</a>
+        <a href="../index.html#contact">Contact</a>
+        <a href="https://drive.google.com/file/d/1RIDO3iiSiJnvqMOIWYAjDAUAJXNLIBix/view?usp=sharing" target="_blank" rel="noopener" class="btn btn-primary nav-resume">Resume</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="cs-page">
+    <div class="container">
+      <a href="../index.html#projects" class="cs-back">&larr; Back to projects</a>
+
+      <header class="cs-hero">
+        <div class="cs-num">06</div>
+        <h1 class="cs-title">Page definition</h1>
+        <p class="cs-subtitle">Creating the rules-based UX for defining and managing page structures in web analytics.</p>
+        <div class="cs-tags">
+          <span class="tag">Rules UX</span>
+          <span class="tag">Web</span>
+          <span class="tag">UXCam</span>
+        </div>
+      </header>
+
+      <div class="cs-cover">
+        <span class="placeholder-icon">Cover image placeholder</span>
+      </div>
+
+      <div class="cs-content">
+        <section class="cs-section">
+          <h2>Overview</h2>
+          <p>Web analytics depends on accurate page identification. Unlike mobile apps with discrete screens, web pages are defined by URLs that can be complex, dynamic, and inconsistent. This project designed the system that lets users define and manage how pages are identified and grouped within UXCam's web product.</p>
+        </section>
+
+        <section class="cs-section">
+          <h2>Problem</h2>
+          <p>Page definition for web analytics involves inherent complexity:</p>
+          <ul>
+            <li>URLs contain query parameters, fragments, and dynamic segments that need flexible matching</li>
+            <li>Single-page applications blur the line between pages and views</li>
+            <li>Users needed to group similar URLs without writing regex</li>
+            <li>The system had to work automatically while allowing manual override</li>
+          </ul>
+        </section>
+
+        <section class="cs-section">
+          <h2>Process</h2>
+          <p>I mapped the different URL patterns our customers encounter and designed a rules engine that could handle them. The design process involved close collaboration with engineering to understand pattern matching capabilities and with customers to validate that the mental model made sense.</p>
+          <p>We iterated on the rule builder interface through multiple rounds of usability testing, focusing on making regex-level power accessible without requiring regex knowledge.</p>
+        </section>
+
+        <section class="cs-section">
+          <h2>Solution</h2>
+          <p>The page definition system uses a visual rule builder with conditions like "URL contains," "URL starts with," and wildcard matching. Users can preview which URLs match their rules in real-time, create page groups for aggregate analysis, and set priorities when rules overlap. Auto-detection handles common cases with manual override available.</p>
+        </section>
+
+        <section class="cs-section">
+          <h2>Outcome</h2>
+          <p>The page definition feature enabled accurate web analytics for customers with complex site architectures. The visual rule builder made the feature accessible to non-technical users while providing enough flexibility for advanced use cases.</p>
+        </section>
+      </div>
+
+      <nav class="cs-nav" aria-label="Case study navigation">
+        <a href="heatmap-web.html" class="cs-nav-link">
+          <span class="cs-nav-label">Previous</span>
+          <span class="cs-nav-title">Heatmap creation for web</span>
+        </a>
+        <a href="alert-system.html" class="cs-nav-link cs-nav-link--next">
+          <span class="cs-nav-label">Next</span>
+          <span class="cs-nav-title">Alert system</span>
+        </a>
+      </nav>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p class="footer-credit">&copy; 2025 Sichu Maharjan</p>
+      <a href="#" class="back-to-top" aria-label="Back to top">&uarr; Top</a>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

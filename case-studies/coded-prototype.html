@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coded prototype of signup experience — Sichu Maharjan</title>
+  <meta name="description" content="Case study: Building a high-fidelity HTML/CSS prototype to test and validate the new signup flow before engineering handoff.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="container">
+      <a href="../index.html" class="nav-logo" aria-label="Sichu Maharjan — Home">sichu<span>.</span></a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-links">
+        <a href="../index.html#projects">Projects</a>
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#skills">Skills</a>
+        <a href="../index.html#contact">Contact</a>
+        <a href="https://drive.google.com/file/d/1RIDO3iiSiJnvqMOIWYAjDAUAJXNLIBix/view?usp=sharing" target="_blank" rel="noopener" class="btn btn-primary nav-resume">Resume</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="cs-page">
+    <div class="container">
+      <a href="../index.html#projects" class="cs-back">&larr; Back to projects</a>
+
+      <header class="cs-hero">
+        <div class="cs-num">02</div>
+        <h1 class="cs-title">Coded prototype of signup experience</h1>
+        <p class="cs-subtitle">Building a high-fidelity HTML/CSS prototype to test and validate the new signup flow before engineering handoff.</p>
+        <div class="cs-tags">
+          <span class="tag">Prototyping</span>
+          <span class="tag">HTML/CSS</span>
+          <span class="tag">UXCam</span>
+        </div>
+      </header>
+
+      <div class="cs-cover">
+        <span class="placeholder-icon">Cover image placeholder</span>
+      </div>
+
+      <div class="cs-content">
+        <section class="cs-section">
+          <h2>Overview</h2>
+          <p>After designing the new signup-to-activation flow, we needed a way to test the experience with real interactions — clicks, transitions, form validation — that static mockups couldn't capture. I built a coded prototype in HTML/CSS/JS that replicated the full signup journey.</p>
+        </section>
+
+        <section class="cs-section">
+          <h2>Problem</h2>
+          <p>Design tools can only approximate the real experience. For a flow as critical as signup, we needed higher fidelity testing:</p>
+          <ul>
+            <li>Static prototypes missed timing and transition nuances</li>
+            <li>Stakeholders had difficulty imagining the final experience from mockups alone</li>
+            <li>We needed to test with real form interactions and validation feedback</li>
+            <li>Engineering needed a concrete reference beyond design specs</li>
+          </ul>
+        </section>
+
+        <section class="cs-section">
+          <h2>Process</h2>
+          <p>I translated the Figma designs into clean, semantic HTML with CSS that closely matched our design system. The prototype included form validation, step transitions, loading states, and responsive behavior.</p>
+          <p>This was shared with users for remote testing sessions and served as a living spec that engineers could inspect for implementation details.</p>
+        </section>
+
+        <section class="cs-section">
+          <h2>Solution</h2>
+          <p>The coded prototype covered the complete signup flow: account creation, workspace setup, SDK integration guide, and the first-run experience. Every state — empty, loading, error, success — was implemented to give users and stakeholders a complete picture.</p>
+        </section>
+
+        <section class="cs-section">
+          <h2>Outcome</h2>
+          <p>Testing with the coded prototype revealed interaction issues we'd missed in static mockups. It accelerated engineering handoff by reducing ambiguity and became a reusable reference for future onboarding iterations.</p>
+        </section>
+      </div>
+
+      <nav class="cs-nav" aria-label="Case study navigation">
+        <a href="signup-to-activation.html" class="cs-nav-link">
+          <span class="cs-nav-label">Previous</span>
+          <span class="cs-nav-title">Signup-to-activation</span>
+        </a>
+        <a href="settings-access-keys.html" class="cs-nav-link cs-nav-link--next">
+          <span class="cs-nav-label">Next</span>
+          <span class="cs-nav-title">Project & environment settings + access keys</span>
+        </a>
+      </nav>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p class="footer-credit">&copy; 2025 Sichu Maharjan</p>
+      <a href="#" class="back-to-top" aria-label="Back to top">&uarr; Top</a>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

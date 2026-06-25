@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Heatmap creation for web — Sichu Maharjan</title>
+  <meta name="description" content="Case study: Designing the heatmap generation workflow for UXCam's web analytics platform.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="container">
+      <a href="../index.html" class="nav-logo" aria-label="Sichu Maharjan — Home">sichu<span>.</span></a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-links">
+        <a href="../index.html#projects">Projects</a>
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#skills">Skills</a>
+        <a href="../index.html#contact">Contact</a>
+        <a href="https://drive.google.com/file/d/1RIDO3iiSiJnvqMOIWYAjDAUAJXNLIBix/view?usp=sharing" target="_blank" rel="noopener" class="btn btn-primary nav-resume">Resume</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="cs-page">
+    <div class="container">
+      <a href="../index.html#projects" class="cs-back">&larr; Back to projects</a>
+
+      <header class="cs-hero">
+        <div class="cs-num">05</div>
+        <h1 class="cs-title">Heatmap creation for web</h1>
+        <p class="cs-subtitle">Designing the heatmap generation workflow for UXCam's web analytics platform.</p>
+        <div class="cs-tags">
+          <span class="tag">Data Viz</span>
+          <span class="tag">Web</span>
+          <span class="tag">UXCam</span>
+        </div>
+      </header>
+
+      <div class="cs-cover">
+        <span class="placeholder-icon">Cover image placeholder</span>
+      </div>
+
+      <div class="cs-content">
+        <section class="cs-section">
+          <h2>Overview</h2>
+          <p>As UXCam expanded from mobile to web analytics, heatmaps were a core feature that needed to be designed for a fundamentally different context. Web pages are dynamic, responsive, and structurally more complex than mobile screens. This project defined how users create, configure, and interpret heatmaps for web.</p>
+        </section>
+
+        <section class="cs-section">
+          <h2>Problem</h2>
+          <p>Translating heatmaps from mobile to web introduced new challenges:</p>
+          <ul>
+            <li>Web pages have variable layouts across breakpoints and viewport sizes</li>
+            <li>Dynamic content (SPAs, lazy loading) complicates page capture</li>
+            <li>Users needed to specify which page variant to analyze</li>
+            <li>The creation flow needed to handle both simple and complex use cases</li>
+          </ul>
+        </section>
+
+        <section class="cs-section">
+          <h2>Process</h2>
+          <p>I researched how other analytics tools handled web heatmaps, identified gaps, and mapped UXCam's unique advantages. Working with engineering, I defined what was technically feasible for the initial release and designed a progressive disclosure model that could grow over time.</p>
+          <p>Prototypes were tested with existing UXCam customers to validate the creation workflow and data visualization approach.</p>
+        </section>
+
+        <section class="cs-section">
+          <h2>Solution</h2>
+          <p>The heatmap creation flow guides users through page selection, viewport configuration, and data range settings. The visualization supports click, scroll, and attention heatmaps with toggleable overlays. A responsive preview lets users switch between device sizes to see how interaction patterns differ.</p>
+        </section>
+
+        <section class="cs-section">
+          <h2>Outcome</h2>
+          <p>The web heatmap feature launched as a key differentiator for UXCam's web product. The creation workflow tested well with users, and the progressive complexity model allowed power users to access advanced configurations without overwhelming new users.</p>
+        </section>
+      </div>
+
+      <nav class="cs-nav" aria-label="Case study navigation">
+        <a href="structural-model-shift.html" class="cs-nav-link">
+          <span class="cs-nav-label">Previous</span>
+          <span class="cs-nav-title">Structural model shift</span>
+        </a>
+        <a href="page-definition.html" class="cs-nav-link cs-nav-link--next">
+          <span class="cs-nav-label">Next</span>
+          <span class="cs-nav-title">Page definition</span>
+        </a>
+      </nav>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p class="footer-credit">&copy; 2025 Sichu Maharjan</p>
+      <a href="#" class="back-to-top" aria-label="Back to top">&uarr; Top</a>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
