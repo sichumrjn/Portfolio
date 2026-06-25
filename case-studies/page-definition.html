@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Page definition — Sichu Maharjan</title>
-  <meta name="description" content="Case study: Creating the rules-based UX for defining and managing page structures in web analytics.">
+  <meta name="description" content="Case study: Designing the rules-based UX for defining and managing page structures in web analytics, turning complex dynamic URLs into meaningful page names.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
@@ -32,58 +32,101 @@
       <a href="../index.html#projects" class="cs-back">&larr; Back to projects</a>
 
       <header class="cs-hero">
-        <div class="cs-num">06</div>
+        <div class="cs-num">05</div>
         <h1 class="cs-title">Page definition</h1>
-        <p class="cs-subtitle">Creating the rules-based UX for defining and managing page structures in web analytics.</p>
+        <p class="cs-subtitle">Designing a rules engine that turns complex, dynamic URLs into meaningful page names for cleaner analytics.</p>
         <div class="cs-tags">
           <span class="tag">Rules UX</span>
-          <span class="tag">Web</span>
+          <span class="tag">Web Analytics</span>
           <span class="tag">UXCam</span>
         </div>
       </header>
 
-      <div class="cs-cover">
-        <span class="placeholder-icon">Cover image placeholder</span>
-      </div>
+      <figure class="cs-img cs-img--hero">
+        <img src="../images/page-definition-illustration.svg" alt="Page definition rule builder interface showing URL parsing, dynamic segment selection, match pattern generation, and rules management table" loading="lazy">
+      </figure>
 
       <div class="cs-content">
+
         <section class="cs-section">
           <h2>Overview</h2>
-          <p>Web analytics depends on accurate page identification. Unlike mobile apps with discrete screens, web pages are defined by URLs that can be complex, dynamic, and inconsistent. This project designed the system that lets users define and manage how pages are identified and grouped within UXCam's web product.</p>
+          <p>Web analytics depends on accurate page identification. Unlike mobile apps with discrete screens, web pages are identified by URLs that can be complex, dynamic, and inconsistent. A single product page might generate thousands of unique URLs based on product IDs, session parameters, and query strings.</p>
+          <p>I designed the Page Definition feature that allows users to create custom rules to categorize and group similar URLs into single pages, assign meaningful names, and save dynamic parameters for filtering, all without writing a single line of regex.</p>
         </section>
 
         <section class="cs-section">
-          <h2>Problem</h2>
-          <p>Page definition for web analytics involves inherent complexity:</p>
+          <h2>The Problems</h2>
+
+          <div class="cs-feature">
+            <h3>Dynamic URLs</h3>
+            <p>Dynamic URL parameters like session IDs, user IDs, and product SKUs make it impossible to consolidate data. A product details page with 500 products creates 500 separate "pages" in reports, cluttering dashboards and hiding real insights. Users needed to see aggregate page performance while retaining the ability to filter by individual parameter values.</p>
+          </div>
+
+          <div class="cs-feature">
+            <h3>Fragment-based navigation</h3>
+            <p>Some web apps use URL fragments (#checkout, #cart) to load new content without page reloads. Standard tracking based on path changes misses these entirely. Users with fragment-based SPAs had no way to track these as separate page views.</p>
+          </div>
+
+          <div class="cs-feature">
+            <h3>Unreadable page names</h3>
+            <p>URLs are too long and complex for analytics. The most meaningful part, typically the end of the URL, gets trimmed in charts and tables. Users needed human-readable names replacing cryptic URL paths in every report across UXCam.</p>
+          </div>
+        </section>
+
+        <section class="cs-section">
+          <h2>How It Works</h2>
+
+          <div class="cs-feature">
+            <h3>Enter a URL and parse it into segments</h3>
+            <p>Users paste a URL and UXCam automatically breaks it into clickable path segments, stripping query parameters. Each segment becomes an interactive chip that can be marked as static or dynamic.</p>
+          </div>
+
+          <div class="cs-feature">
+            <h3>Select dynamic segments and name parameters</h3>
+            <p>Clicking a segment marks it as dynamic. Users can assign a meaningful parameter name (like {appid} or {product_id}) or leave it as a wildcard (*). Named parameters become available as screen visit properties for filtering and grouping across dashboards.</p>
+          </div>
+
+          <div class="cs-feature">
+            <h3>Handle fragments and trailing paths</h3>
+            <p>A checkbox enables fragment support, adding hash segments to the rule. Another option, "Ignore everything after the last path level," appends ** to catch path variations the user hasn't explicitly defined.</p>
+          </div>
+
+          <div class="cs-feature">
+            <h3>Name the page and test the rule</h3>
+            <p>Users assign a display name that replaces the URL everywhere in UXCam: reports, screen flows, session timelines. Before saving, they can test sample URLs against the rule to verify matches, reducing the risk of misconfigured rules.</p>
+          </div>
+        </section>
+
+        <section class="cs-section">
+          <h2>Design Decisions</h2>
+          <p>The primary design challenge was making regex-level pattern matching accessible without requiring regex knowledge. The solution was a visual segment picker that builds the match pattern in real-time as users interact with URL parts.</p>
+          <p>Rules are evaluated top-to-bottom by hierarchy order. This allows users to create specific rules that take priority over generic ones. For example, a rule matching the exact path "empty" can be ranked above a wildcard rule, so first-time states get their own page name while all other variations fall through to the general rule.</p>
+          <p>The rules table shows pattern, page name, creation date, and status (active/archived) at a glance. Archiving instead of deleting preserves the ability to restore rules within 90 days. A changelog tracks every creation, edit, and archive with who made the change and when, critical for teams where data consistency matters.</p>
+        </section>
+
+        <section class="cs-section">
+          <h2>Key Constraints</h2>
           <ul>
-            <li>URLs contain query parameters, fragments, and dynamic segments that need flexible matching</li>
-            <li>Single-page applications blur the line between pages and views</li>
-            <li>Users needed to group similar URLs without writing regex</li>
-            <li>The system had to work automatically while allowing manual override</li>
+            <li>Maximum 100 rules per app (hard limit, archiving frees slots)</li>
+            <li>Up to 5 named parameters per URL rule</li>
+            <li>Parameter values capped at 1024 characters</li>
+            <li>Rules apply to future sessions only, changes are never retroactive</li>
+            <li>Query parameters excluded from rule matching (future iteration)</li>
+            <li>Permissions: only org owners, org managers, and app managers can create or edit rules</li>
           </ul>
         </section>
 
         <section class="cs-section">
-          <h2>Process</h2>
-          <p>I mapped the different URL patterns our customers encounter and designed a rules engine that could handle them. The design process involved close collaboration with engineering to understand pattern matching capabilities and with customers to validate that the mental model made sense.</p>
-          <p>We iterated on the rule builder interface through multiple rounds of usability testing, focusing on making regex-level power accessible without requiring regex knowledge.</p>
-        </section>
-
-        <section class="cs-section">
-          <h2>Solution</h2>
-          <p>The page definition system uses a visual rule builder with conditions like "URL contains," "URL starts with," and wildcard matching. Users can preview which URLs match their rules in real-time, create page groups for aggregate analysis, and set priorities when rules overlap. Auto-detection handles common cases with manual override available.</p>
-        </section>
-
-        <section class="cs-section">
           <h2>Outcome</h2>
-          <p>The page definition feature enabled accurate web analytics for customers with complex site architectures. The visual rule builder made the feature accessible to non-technical users while providing enough flexibility for advanced use cases.</p>
+          <p>Page Definition enabled accurate web analytics for customers with complex, dynamic site architectures. The visual rule builder made the feature accessible to product managers and analysts without technical expertise, while the parameter naming system gave power users the filtering depth they needed. The testing workflow, both during creation and at the general level, reduced misconfiguration and gave teams confidence in their data.</p>
         </section>
+
       </div>
 
       <nav class="cs-nav" aria-label="Case study navigation">
-        <a href="heatmap-web.html" class="cs-nav-link">
+        <a href="structural-model-shift.html" class="cs-nav-link">
           <span class="cs-nav-label">Previous</span>
-          <span class="cs-nav-title">Heatmap creation for web</span>
+          <span class="cs-nav-title">Structural model shift</span>
         </a>
         <a href="alert-system.html" class="cs-nav-link cs-nav-link--next">
           <span class="cs-nav-label">Next</span>
@@ -97,7 +140,7 @@
     <div class="container">
       <p class="footer-credit">&copy; 2025 Sichu Maharjan</p>
       <a href="#" class="back-to-top" aria-label="Back to top">&uarr; Top</a>
-    </div>
+  </div>
   </footer>
 
   <script src="../js/main.js"></script>

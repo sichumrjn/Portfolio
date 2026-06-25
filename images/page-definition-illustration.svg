@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" fill="none">
+  <defs>
+    <filter id="shadow" x="-4%" y="-4%" width="108%" height="112%">
+      <feDropShadow dx="0" dy="4" stdDeviation="12" flood-color="#000" flood-opacity=".06"/>
+    </filter>
+    <filter id="shadow-sm" x="-4%" y="-4%" width="108%" height="112%">
+      <feDropShadow dx="0" dy="2" stdDeviation="6" flood-color="#000" flood-opacity=".05"/>
+    </filter>
+    <linearGradient id="bg" x1="0" y1="0" x2="960" y2="540" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ECFDF5"/>
+      <stop offset="100%" stop-color="#E0F2FE"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="960" height="540" rx="16" fill="url(#bg)"/>
+
+  <!-- Window frame -->
+  <g filter="url(#shadow)">
+    <rect x="40" y="30" width="880" height="480" rx="12" fill="#fff"/>
+  </g>
+
+  <!-- Window bar -->
+  <rect x="40" y="30" width="880" height="40" rx="12" fill="#F8FAFC"/>
+  <rect x="40" y="58" width="880" height="12" fill="#F8FAFC"/>
+  <circle cx="64" cy="50" r="6" fill="#FF5F57"/>
+  <circle cx="82" cy="50" r="6" fill="#FFBD2E"/>
+  <circle cx="100" cy="50" r="6" fill="#28C840"/>
+  <text x="480" y="54" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#94A3B8" text-anchor="middle">app.uxcam.com / settings / page-definitions</text>
+
+  <!-- Page title -->
+  <text x="72" y="100" font-family="Inter, system-ui, sans-serif" font-size="18" font-weight="700" fill="#0F172A">Page Definitions</text>
+  <text x="72" y="118" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#94A3B8">Define rules to group dynamic URLs into meaningful page names</text>
+
+  <!-- Create Rule button -->
+  <rect x="780" y="84" width="116" height="34" rx="8" fill="#10B981"/>
+  <text x="838" y="106" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="600" fill="#fff" text-anchor="middle">+ Create Rule</text>
+
+  <!-- Divider -->
+  <line x1="72" y1="132" x2="888" y2="132" stroke="#E2E8F0" stroke-width="1"/>
+
+  <!-- ===== Rule Builder Card ===== -->
+  <g filter="url(#shadow-sm)">
+    <rect x="72" y="148" width="816" height="200" rx="10" fill="#F8FAFC" stroke="#D1FAE5" stroke-width="1.5"/>
+  </g>
+
+  <!-- Rule builder header -->
+  <rect x="72" y="148" width="816" height="36" rx="10" fill="#ECFDF5"/>
+  <rect x="72" y="174" width="816" height="10" fill="#ECFDF5"/>
+  <text x="92" y="172" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#065F46">New Page Rule</text>
+
+  <!-- URL input -->
+  <text x="92" y="210" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="500" fill="#64748B">Enter URL</text>
+  <rect x="92" y="218" width="520" height="32" rx="6" fill="#fff" stroke="#E2E8F0" stroke-width="1"/>
+  <text x="104" y="239" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#94A3B8">https://example.com/app/12345/products/SKU-789</text>
+
+  <!-- Submit button -->
+  <rect x="620" y="218" width="60" height="32" rx="6" fill="#0F172A"/>
+  <text x="650" y="239" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="600" fill="#fff" text-anchor="middle">Parse</text>
+
+  <!-- Parsed segments -->
+  <text x="92" y="272" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="500" fill="#64748B">URL Segments</text>
+
+  <!-- Segment: app (static) -->
+  <rect x="92" y="280" width="44" height="28" rx="6" fill="#F1F5F9" stroke="#CBD5E1" stroke-width="1"/>
+  <text x="114" y="299" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#475569" text-anchor="middle">app</text>
+  <text x="143" y="299" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#CBD5E1">/</text>
+
+  <!-- Segment: 12345 (selected as dynamic) -->
+  <rect x="152" y="280" width="80" height="28" rx="6" fill="#DBEAFE" stroke="#3B82F6" stroke-width="1.5"/>
+  <text x="192" y="299" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="500" fill="#1D4ED8" text-anchor="middle">{appid}</text>
+  <text x="239" y="299" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#CBD5E1">/</text>
+
+  <!-- Segment: products (static) -->
+  <rect x="248" y="280" width="76" height="28" rx="6" fill="#F1F5F9" stroke="#CBD5E1" stroke-width="1"/>
+  <text x="286" y="299" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#475569" text-anchor="middle">products</text>
+  <text x="331" y="299" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#CBD5E1">/</text>
+
+  <!-- Segment: SKU-789 (selected as dynamic) -->
+  <rect x="340" y="280" width="100" height="28" rx="6" fill="#DBEAFE" stroke="#3B82F6" stroke-width="1.5"/>
+  <text x="390" y="299" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="500" fill="#1D4ED8" text-anchor="middle">{product_id}</text>
+
+  <!-- Match pattern label -->
+  <text x="92" y="330" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="500" fill="#64748B">Match Pattern</text>
+  <rect x="190" y="318" width="300" height="22" rx="4" fill="#F0FDF4" stroke="#BBF7D0" stroke-width="1"/>
+  <text x="200" y="334" font-family="JetBrains Mono, monospace" font-size="11" fill="#166534">app/{appid}/products/{product_id}</text>
+
+  <!-- Page name input -->
+  <text x="530" y="330" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="500" fill="#64748B">Page Name</text>
+  <rect x="610" y="318" width="160" height="22" rx="4" fill="#fff" stroke="#10B981" stroke-width="1.5"/>
+  <text x="620" y="334" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="500" fill="#0F172A">Product Details</text>
+
+  <!-- ===== Rules Table ===== -->
+  <!-- Table header -->
+  <rect x="72" y="368" width="816" height="32" rx="0" fill="#F8FAFC"/>
+  <text x="92" y="389" font-family="Inter, system-ui, sans-serif" font-size="10" font-weight="600" fill="#64748B" letter-spacing=".04em">#</text>
+  <text x="120" y="389" font-family="Inter, system-ui, sans-serif" font-size="10" font-weight="600" fill="#64748B" letter-spacing=".04em">PATTERN</text>
+  <text x="460" y="389" font-family="Inter, system-ui, sans-serif" font-size="10" font-weight="600" fill="#64748B" letter-spacing=".04em">PAGE NAME</text>
+  <text x="650" y="389" font-family="Inter, system-ui, sans-serif" font-size="10" font-weight="600" fill="#64748B" letter-spacing=".04em">CREATED</text>
+  <text x="780" y="389" font-family="Inter, system-ui, sans-serif" font-size="10" font-weight="600" fill="#64748B" letter-spacing=".04em">STATUS</text>
+
+  <!-- Row 1 -->
+  <line x1="72" y1="400" x2="888" y2="400" stroke="#F1F5F9" stroke-width="1"/>
+  <text x="92" y="421" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#94A3B8">1</text>
+  <text x="120" y="421" font-family="JetBrains Mono, monospace" font-size="11" fill="#334155">app/{appid}/products/{product_id}</text>
+  <text x="460" y="421" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#0F172A">Product Details</text>
+  <text x="650" y="421" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#94A3B8">Sep 20, 2024</text>
+  <rect x="780" y="409" width="52" height="20" rx="10" fill="#DCFCE7"/>
+  <text x="806" y="423" font-family="Inter, system-ui, sans-serif" font-size="10" font-weight="500" fill="#166534" text-anchor="middle">Active</text>
+
+  <!-- Row 2 -->
+  <line x1="72" y1="436" x2="888" y2="436" stroke="#F1F5F9" stroke-width="1"/>
+  <text x="92" y="457" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#94A3B8">2</text>
+  <text x="120" y="457" font-family="JetBrains Mono, monospace" font-size="11" fill="#334155">app/{appid}/dashboard/**</text>
+  <text x="460" y="457" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#0F172A">Dashboard</text>
+  <text x="650" y="457" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#94A3B8">Sep 18, 2024</text>
+  <rect x="780" y="445" width="52" height="20" rx="10" fill="#DCFCE7"/>
+  <text x="806" y="459" font-family="Inter, system-ui, sans-serif" font-size="10" font-weight="500" fill="#166534" text-anchor="middle">Active</text>
+
+  <!-- Row 3 -->
+  <line x1="72" y1="472" x2="888" y2="472" stroke="#F1F5F9" stroke-width="1"/>
+  <text x="92" y="493" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#94A3B8">3</text>
+  <text x="120" y="493" font-family="JetBrains Mono, monospace" font-size="11" fill="#334155">en/menu/{restaurant}#checkout</text>
+  <text x="460" y="493" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#0F172A">Checkout</text>
+  <text x="650" y="493" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#94A3B8">Sep 15, 2024</text>
+  <rect x="780" y="481" width="52" height="20" rx="10" fill="#DCFCE7"/>
+  <text x="806" y="495" font-family="Inter, system-ui, sans-serif" font-size="10" font-weight="500" fill="#166534" text-anchor="middle">Active</text>
+
+</svg>
