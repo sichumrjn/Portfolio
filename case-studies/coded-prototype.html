@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Coded prototype of signup experience — Sichu Maharjan</title>
-  <meta name="description" content="Case study: Building a high-fidelity HTML/CSS prototype to test and validate the new signup flow before engineering handoff.">
+  <title>Redesigned signup experience — Sichu Maharjan</title>
+  <meta name="description" content="Case study: Redesigning UXCam's signup and onboarding experience to reduce friction and guide users from account creation to their first project setup.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
@@ -33,57 +33,156 @@
 
       <header class="cs-hero">
         <div class="cs-num">02</div>
-        <h1 class="cs-title">Coded prototype of signup experience</h1>
-        <p class="cs-subtitle">Building a high-fidelity HTML/CSS prototype to test and validate the new signup flow before engineering handoff.</p>
+        <h1 class="cs-title">Redesigned signup experience</h1>
+        <p class="cs-subtitle">Rethinking UXCam's entire signup and onboarding flow to reduce friction, build user confidence, and get teams to value faster.</p>
         <div class="cs-tags">
-          <span class="tag">Prototyping</span>
-          <span class="tag">HTML/CSS</span>
+          <span class="tag">UX Design</span>
+          <span class="tag">Onboarding</span>
           <span class="tag">UXCam</span>
         </div>
       </header>
 
-      <div class="cs-cover">
-        <span class="placeholder-icon">Cover image placeholder</span>
-      </div>
+      <figure class="cs-img cs-img--hero">
+        <div class="cs-img-frame">
+          <div class="cs-img-frame-bar">
+            <span class="cs-img-frame-dot"></span>
+            <span class="cs-img-frame-dot"></span>
+            <span class="cs-img-frame-dot"></span>
+            <span class="cs-img-frame-url">uxcam.com / signup</span>
+          </div>
+          <img src="../images/signup-card.png" alt="UXCam sign up page with Google sign up, email input, and analytics dashboard preview" loading="lazy">
+        </div>
+      </figure>
 
       <div class="cs-content">
         <section class="cs-section">
           <h2>Overview</h2>
-          <p>After designing the new signup-to-activation flow, we needed a way to test the experience with real interactions — clicks, transitions, form validation — that static mockups couldn't capture. I built a coded prototype in HTML/CSS/JS that replicated the full signup journey.</p>
+          <p>UXCam's existing signup flow was functional but generic. Users created an account, landed in an empty dashboard, and were left to figure things out on their own. The redesign introduced a guided, multi-step onboarding that collects the right information at the right time and gives users a clear sense of progress toward their first project.</p>
         </section>
 
         <section class="cs-section">
-          <h2>Problem</h2>
-          <p>Design tools can only approximate the real experience. For a flow as critical as signup, we needed higher fidelity testing:</p>
+          <h2>The Challenge</h2>
+          <p>The old signup experience had several problems driving drop-off:</p>
           <ul>
-            <li>Static prototypes missed timing and transition nuances</li>
-            <li>Stakeholders had difficulty imagining the final experience from mockups alone</li>
-            <li>We needed to test with real form interactions and validation feedback</li>
-            <li>Engineering needed a concrete reference beyond design specs</li>
+            <li>No progressive onboarding. Users were dumped into a blank dashboard after signup</li>
+            <li>Critical setup steps like project creation and SDK integration were buried in settings</li>
+            <li>Users had no visibility into what the product would look like once configured</li>
+            <li>No personalization. Every user got the same default experience regardless of role</li>
           </ul>
         </section>
 
-        <section class="cs-section">
-          <h2>Process</h2>
-          <p>I translated the Figma designs into clean, semantic HTML with CSS that closely matched our design system. The prototype included form validation, step transitions, loading states, and responsive behavior.</p>
-          <p>This was shared with users for remote testing sessions and served as a living spec that engineers could inspect for implementation details.</p>
-        </section>
+        <figure class="cs-img">
+          <div class="cs-img-frame">
+            <div class="cs-img-frame-bar">
+              <span class="cs-img-frame-dot"></span>
+              <span class="cs-img-frame-dot"></span>
+              <span class="cs-img-frame-dot"></span>
+              <span class="cs-img-frame-url">uxcam.com / onboarding / company</span>
+            </div>
+            <img src="../images/signup-2.png" alt="Tell us about your company step with organization name input and workspace setup preview" loading="lazy">
+          </div>
+          <figcaption>Workspace setup: collecting the organization name while the right panel previews the workspace being configured with quick setup progress</figcaption>
+        </figure>
+
+        <figure class="cs-img">
+          <div class="cs-img-frame">
+            <div class="cs-img-frame-bar">
+              <span class="cs-img-frame-dot"></span>
+              <span class="cs-img-frame-dot"></span>
+              <span class="cs-img-frame-dot"></span>
+              <span class="cs-img-frame-url">uxcam.com / onboarding / profile</span>
+            </div>
+            <img src="../images/signup-3.png" alt="Tell us about you step with name, phone number, and department fields for role-based personalization" loading="lazy">
+          </div>
+          <figcaption>Profile personalization: collecting role and department to tailor dashboards. The preview shows how usage data will be broken down by team</figcaption>
+        </figure>
 
         <section class="cs-section">
-          <h2>Solution</h2>
-          <p>The coded prototype covered the complete signup flow: account creation, workspace setup, SDK integration guide, and the first-run experience. Every state — empty, loading, error, success — was implemented to give users and stakeholders a complete picture.</p>
+          <h2>Design Approach</h2>
+          <p>The core design decision was the split-screen layout. The left side collects information through simple, focused forms. The right side shows a contextual preview that evolves with each step, giving users a live sense of what they're building toward.</p>
+          <p>Each preview is specific to the step. The signup page shows session and duration metrics. The company step shows workspace configuration progress. The profile step shows role-based dashboard breakdowns. This reduces anxiety and builds confidence that the setup is going somewhere meaningful.</p>
         </section>
+
+        <figure class="cs-img">
+          <div class="cs-img-frame">
+            <div class="cs-img-frame-bar">
+              <span class="cs-img-frame-dot"></span>
+              <span class="cs-img-frame-dot"></span>
+              <span class="cs-img-frame-dot"></span>
+              <span class="cs-img-frame-url">uxcam.com / onboarding / discovery</span>
+            </div>
+            <img src="../images/signup-4.png" alt="One last thing step asking how the user heard about UXCam, with a channel breakdown chart preview" loading="lazy">
+          </div>
+          <figcaption>Attribution step: a single discovery question with a preview showing top acquisition channels, keeping the step lightweight</figcaption>
+        </figure>
+
+        <section class="cs-section">
+          <h2>Project Setup Flow</h2>
+          <p>After account creation, users move into a three-step project setup wizard. This is where the product becomes real. Users name their project, choose a data region, connect their app, and configure environments, all within a guided flow with clear progress indicators.</p>
+        </section>
+
+        <figure class="cs-img">
+          <div class="cs-img-frame">
+            <div class="cs-img-frame-bar">
+              <span class="cs-img-frame-dot"></span>
+              <span class="cs-img-frame-dot"></span>
+              <span class="cs-img-frame-dot"></span>
+              <span class="cs-img-frame-url">uxcam.com / setup / project</span>
+            </div>
+            <img src="../images/signup-5.png" alt="Step 1 of 3: Welcome screen with project name input and data storage region selection (US, EU, UAE)" loading="lazy">
+          </div>
+          <figcaption>Step 1: Project name and data storage region (US, EU, UAE). The preview shows Dashboard, Session Replay, Heatmaps, and Funnels ready to go</figcaption>
+        </figure>
+
+        <figure class="cs-img">
+          <div class="cs-img-frame">
+            <div class="cs-img-frame-bar">
+              <span class="cs-img-frame-dot"></span>
+              <span class="cs-img-frame-dot"></span>
+              <span class="cs-img-frame-dot"></span>
+              <span class="cs-img-frame-url">uxcam.com / setup / app</span>
+            </div>
+            <img src="../images/signup-6.png" alt="Step 2 of 3: What app do you want to track with App Store and Google Play search inputs" loading="lazy">
+          </div>
+          <figcaption>Step 2: Connecting the app via App Store or Google Play. The preview shifts to show touch heatmap tap zones for mobile</figcaption>
+        </figure>
+
+        <figure class="cs-img">
+          <div class="cs-img-frame">
+            <div class="cs-img-frame-bar">
+              <span class="cs-img-frame-dot"></span>
+              <span class="cs-img-frame-dot"></span>
+              <span class="cs-img-frame-dot"></span>
+              <span class="cs-img-frame-url">uxcam.com / setup / environments</span>
+            </div>
+            <img src="../images/signup-7.png" alt="Step 3 of 3: Environment selection with Production and Testing options, showing data pipeline status" loading="lazy">
+          </div>
+          <figcaption>Step 3: Choosing environments (Production, Staging, Testing) with data pipeline health and latency displayed in the preview</figcaption>
+        </figure>
+
+        <figure class="cs-img">
+          <div class="cs-img-frame">
+            <div class="cs-img-frame-bar">
+              <span class="cs-img-frame-dot"></span>
+              <span class="cs-img-frame-dot"></span>
+              <span class="cs-img-frame-dot"></span>
+              <span class="cs-img-frame-url">uxcam.com / setup / configuring</span>
+            </div>
+            <img src="../images/signup-8.png" alt="Setting up your project loading state with step-by-step configuration progress icons" loading="lazy">
+          </div>
+          <figcaption>Final provisioning screen: a step-by-step progress animation while the project is being configured in the background</figcaption>
+        </figure>
 
         <section class="cs-section">
           <h2>Outcome</h2>
-          <p>Testing with the coded prototype revealed interaction issues we'd missed in static mockups. It accelerated engineering handoff by reducing ambiguity and became a reusable reference for future onboarding iterations.</p>
+          <p>The redesigned signup flow reduced onboarding friction by giving users clear direction at every step. The contextual preview pattern built user confidence and reduced the perceived complexity of setup. The three-step project wizard made what was previously a buried settings task into a natural continuation of the signup experience.</p>
         </section>
       </div>
 
       <nav class="cs-nav" aria-label="Case study navigation">
-        <a href="signup-to-activation.html" class="cs-nav-link">
+        <a href="heatmap-web.html" class="cs-nav-link">
           <span class="cs-nav-label">Previous</span>
-          <span class="cs-nav-title">Signup-to-activation</span>
+          <span class="cs-nav-title">Heatmap creation for web</span>
         </a>
         <a href="settings-access-keys.html" class="cs-nav-link cs-nav-link--next">
           <span class="cs-nav-label">Next</span>
