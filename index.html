@@ -53,7 +53,7 @@
         <span class="tree-leaf">Research</span>
       </div>
       <div class="tree-branch tree-branch--r tree-branch--short" style="--top:28%">
-        <span class="tree-leaf">Figma</span>
+        <span class="tree-leaf">Generative UX</span>
       </div>
       <div class="tree-branch tree-branch--l tree-branch--long" style="--top:36%">
         <span class="tree-leaf">Interaction Design</span>
@@ -94,10 +94,35 @@
 
         <!-- 01 -->
         <article class="project-card reveal">
-          <a href="case-studies/signup-to-activation.html" class="project-card-link" aria-label="Read case study: Signup-to-activation"></a>
-          <div class="project-card-img"><span class="placeholder-icon">01</span></div>
+          <a href="case-studies/heatmap-web.html" class="project-card-link" aria-label="Read case study: Heatmap creation for web"></a>
+          <div class="project-card-img project-card-img--illustration">
+            <img src="images/uxcam-heatmap-illustration.svg" alt="UXCam heatmap analytics illustration showing element ranking, click data tooltip, heat overlay on a product page, and screen metrics panel" loading="lazy">
+          </div>
           <div class="project-card-body">
             <span class="project-card-num">01</span>
+            <h3 class="project-card-title">Heatmap creation for web</h3>
+            <p class="project-card-desc">Designing the heatmap generation workflow for UXCam's web analytics platform.</p>
+            <div class="project-card-tags">
+              <span class="tag">Data Viz</span>
+              <span class="tag">Web</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- 02: Signup-to-activation — funnel flow -->
+        <article class="project-card reveal">
+          <a href="case-studies/signup-to-activation.html" class="project-card-link" aria-label="Read case study: Signup-to-activation"></a>
+          <div class="project-card-img project-card-img--mockup mockup-bg--blue">
+            <div class="card-mockup card-mockup--funnel">
+              <div class="cm-funnel-step cm-funnel-step--1"><span>Sign up</span></div>
+              <div class="cm-funnel-arrow"></div>
+              <div class="cm-funnel-step cm-funnel-step--2"><span>Setup</span></div>
+              <div class="cm-funnel-arrow"></div>
+              <div class="cm-funnel-step cm-funnel-step--3"><span>Activate</span></div>
+            </div>
+          </div>
+          <div class="project-card-body">
+            <span class="project-card-num">02</span>
             <h3 class="project-card-title">Signup-to-activation</h3>
             <p class="project-card-desc">Redesigning the onboarding funnel to reduce drop-off and guide new users toward their first moment of value.</p>
             <div class="project-card-tags">
@@ -107,12 +132,21 @@
           </div>
         </article>
 
-        <!-- 02 -->
+        <!-- 03: Coded prototype — code editor -->
         <article class="project-card reveal">
           <a href="case-studies/coded-prototype.html" class="project-card-link" aria-label="Read case study: Coded prototype of signup experience"></a>
-          <div class="project-card-img"><span class="placeholder-icon">02</span></div>
+          <div class="project-card-img project-card-img--mockup mockup-bg--dark">
+            <div class="card-mockup card-mockup--code">
+              <div class="cm-code-line"><span class="cm-tag">&lt;form</span> <span class="cm-attr">class=</span><span class="cm-str">"signup"</span><span class="cm-tag">&gt;</span></div>
+              <div class="cm-code-line cm-indent"><span class="cm-tag">&lt;input</span> <span class="cm-attr">type=</span><span class="cm-str">"email"</span> <span class="cm-tag">/&gt;</span></div>
+              <div class="cm-code-line cm-indent"><span class="cm-tag">&lt;input</span> <span class="cm-attr">type=</span><span class="cm-str">"password"</span> <span class="cm-tag">/&gt;</span></div>
+              <div class="cm-code-line cm-indent"><span class="cm-tag">&lt;button&gt;</span><span class="cm-text">Get started</span><span class="cm-tag">&lt;/button&gt;</span></div>
+              <div class="cm-code-line"><span class="cm-tag">&lt;/form&gt;</span></div>
+              <div class="cm-cursor"></div>
+            </div>
+          </div>
           <div class="project-card-body">
-            <span class="project-card-num">02</span>
+            <span class="project-card-num">03</span>
             <h3 class="project-card-title">Coded prototype of signup experience</h3>
             <p class="project-card-desc">Building a high-fidelity HTML/CSS prototype to test and validate the new signup flow before engineering handoff.</p>
             <div class="project-card-tags">
@@ -122,12 +156,31 @@
           </div>
         </article>
 
-        <!-- 03 -->
+        <!-- 04: Settings — settings panel -->
         <article class="project-card reveal">
           <a href="case-studies/settings-access-keys.html" class="project-card-link" aria-label="Read case study: Project & environment settings + access keys"></a>
-          <div class="project-card-img"><span class="placeholder-icon">03</span></div>
+          <div class="project-card-img project-card-img--mockup mockup-bg--gray">
+            <div class="card-mockup card-mockup--settings">
+              <div class="cm-settings-sidebar">
+                <div class="cm-set-item cm-set-active"></div>
+                <div class="cm-set-item"></div>
+                <div class="cm-set-item"></div>
+                <div class="cm-set-item"></div>
+              </div>
+              <div class="cm-settings-main">
+                <div class="cm-set-title"></div>
+                <div class="cm-set-row"><span class="cm-set-label"></span><span class="cm-set-field"></span></div>
+                <div class="cm-set-row"><span class="cm-set-label"></span><span class="cm-set-field"></span></div>
+                <div class="cm-set-key">
+                  <span class="cm-key-label">API Key</span>
+                  <span class="cm-key-val">sk-xxxx...xxxx</span>
+                  <span class="cm-key-copy">Copy</span>
+                </div>
+              </div>
+            </div>
+          </div>
           <div class="project-card-body">
-            <span class="project-card-num">03</span>
+            <span class="project-card-num">04</span>
             <h3 class="project-card-title">Project & environment settings + access keys</h3>
             <p class="project-card-desc">Designing the settings architecture and access key management for a multi-environment product setup.</p>
             <div class="project-card-tags">
@@ -138,12 +191,36 @@
           </div>
         </article>
 
-        <!-- 04 -->
+        <!-- 05: Structural shift — hierarchy tree -->
         <article class="project-card reveal">
           <a href="case-studies/structural-model-shift.html" class="project-card-link" aria-label="Read case study: Structural model shift"></a>
-          <div class="project-card-img"><span class="placeholder-icon">04</span></div>
+          <div class="project-card-img project-card-img--mockup mockup-bg--purple">
+            <div class="card-mockup card-mockup--tree">
+              <div class="cm-tree-node cm-tree-root">Org</div>
+              <div class="cm-tree-branches">
+                <div class="cm-tree-branch">
+                  <div class="cm-tree-line"></div>
+                  <div class="cm-tree-node">Project A</div>
+                  <div class="cm-tree-leaves">
+                    <div class="cm-tree-leaf-line"></div>
+                    <div class="cm-tree-leaf">Prod</div>
+                    <div class="cm-tree-leaf-line"></div>
+                    <div class="cm-tree-leaf">Staging</div>
+                  </div>
+                </div>
+                <div class="cm-tree-branch">
+                  <div class="cm-tree-line"></div>
+                  <div class="cm-tree-node">Project B</div>
+                  <div class="cm-tree-leaves">
+                    <div class="cm-tree-leaf-line"></div>
+                    <div class="cm-tree-leaf">Prod</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
           <div class="project-card-body">
-            <span class="project-card-num">04</span>
+            <span class="project-card-num">05</span>
             <h3 class="project-card-title">Structural model shift: flat list → three-level hierarchy</h3>
             <p class="project-card-desc">Transforming a flat organizational model into a structured three-level hierarchy to support scale and clarity.</p>
             <div class="project-card-tags">
@@ -153,25 +230,28 @@
           </div>
         </article>
 
-        <!-- 05 -->
-        <article class="project-card reveal">
-          <a href="case-studies/heatmap-web.html" class="project-card-link" aria-label="Read case study: Heatmap creation for web"></a>
-          <div class="project-card-img"><span class="placeholder-icon">05</span></div>
-          <div class="project-card-body">
-            <span class="project-card-num">05</span>
-            <h3 class="project-card-title">Heatmap creation for web</h3>
-            <p class="project-card-desc">Designing the heatmap generation workflow for UXCam's web analytics platform.</p>
-            <div class="project-card-tags">
-              <span class="tag">Data Viz</span>
-              <span class="tag">Web</span>
-            </div>
-          </div>
-        </article>
-
-        <!-- 06 -->
+        <!-- 06: Page definition — rule builder -->
         <article class="project-card reveal">
           <a href="case-studies/page-definition.html" class="project-card-link" aria-label="Read case study: Page definition"></a>
-          <div class="project-card-img"><span class="placeholder-icon">06</span></div>
+          <div class="project-card-img project-card-img--mockup mockup-bg--green">
+            <div class="card-mockup card-mockup--rules">
+              <div class="cm-rule">
+                <span class="cm-rule-if">IF</span>
+                <span class="cm-rule-cond">URL contains</span>
+                <span class="cm-rule-val">/pricing</span>
+              </div>
+              <div class="cm-rule">
+                <span class="cm-rule-or">OR</span>
+                <span class="cm-rule-cond">URL starts with</span>
+                <span class="cm-rule-val">/plans</span>
+              </div>
+              <div class="cm-rule-result">
+                <span class="cm-rule-then">THEN</span>
+                <span class="cm-rule-page">→ Pricing Page</span>
+              </div>
+              <div class="cm-rule-match">3 URLs matched</div>
+            </div>
+          </div>
           <div class="project-card-body">
             <span class="project-card-num">06</span>
             <h3 class="project-card-title">Page definition</h3>
@@ -183,10 +263,34 @@
           </div>
         </article>
 
-        <!-- 07 -->
+        <!-- 07: Alert system — notification card -->
         <article class="project-card reveal">
           <a href="case-studies/alert-system.html" class="project-card-link" aria-label="Read case study: Alert system"></a>
-          <div class="project-card-img"><span class="placeholder-icon">07</span></div>
+          <div class="project-card-img project-card-img--mockup mockup-bg--red">
+            <div class="card-mockup card-mockup--alert">
+              <div class="cm-alert-card">
+                <div class="cm-alert-icon">!</div>
+                <div class="cm-alert-body">
+                  <div class="cm-alert-title">Crash rate exceeded 2%</div>
+                  <div class="cm-alert-meta">iOS · Production · 12 min ago</div>
+                </div>
+              </div>
+              <div class="cm-alert-card cm-alert-card--warn">
+                <div class="cm-alert-icon cm-alert-icon--warn">⚡</div>
+                <div class="cm-alert-body">
+                  <div class="cm-alert-title">Session drop -18% vs last week</div>
+                  <div class="cm-alert-meta">Web · All envs · 1h ago</div>
+                </div>
+              </div>
+              <div class="cm-alert-card cm-alert-card--ok">
+                <div class="cm-alert-icon cm-alert-icon--ok">✓</div>
+                <div class="cm-alert-body">
+                  <div class="cm-alert-title">Funnel recovery: +5% signup</div>
+                  <div class="cm-alert-meta">Android · Production · 3h ago</div>
+                </div>
+              </div>
+            </div>
+          </div>
           <div class="project-card-body">
             <span class="project-card-num">07</span>
             <h3 class="project-card-title">Alert system</h3>

@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Heatmap creation for web — Sichu Maharjan</title>
-  <meta name="description" content="Case study: Designing the heatmap generation workflow for UXCam's web analytics platform.">
+  <meta name="description" content="Case study: Designing heatmaps and screen analytics for UXCam's web platform — from page-level insights to element-level interaction data.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
@@ -32,62 +32,122 @@
       <a href="../index.html#projects" class="cs-back">&larr; Back to projects</a>
 
       <header class="cs-hero">
-        <div class="cs-num">05</div>
-        <h1 class="cs-title">Heatmap creation for web</h1>
-        <p class="cs-subtitle">Designing the heatmap generation workflow for UXCam's web analytics platform.</p>
+        <div class="cs-num">01</div>
+        <h1 class="cs-title">Heatmaps + Screen Analytics for Web</h1>
+        <p class="cs-subtitle">Visually explore how users interact with your pages. See what they click, where they get stuck, and what they ignore.</p>
         <div class="cs-tags">
           <span class="tag">Data Viz</span>
-          <span class="tag">Web</span>
+          <span class="tag">Web Analytics</span>
+          <span class="tag">UX Design</span>
           <span class="tag">UXCam</span>
         </div>
       </header>
 
-      <div class="cs-cover">
-        <span class="placeholder-icon">Cover image placeholder</span>
-      </div>
+      <figure class="cs-img cs-img--hero">
+        <img src="../images/uxcam-heatmap-illustration.svg" alt="UXCam heatmap analytics illustration showing element ranking, click data tooltip, heat overlay on a product page, and screen metrics panel" loading="lazy">
+      </figure>
 
       <div class="cs-content">
+
         <section class="cs-section">
           <h2>Overview</h2>
-          <p>As UXCam expanded from mobile to web analytics, heatmaps were a core feature that needed to be designed for a fundamentally different context. Web pages are dynamic, responsive, and structurally more complex than mobile screens. This project defined how users create, configure, and interpret heatmaps for web.</p>
+          <p>UXCam expanded from mobile-only analytics to support web. Heatmaps were a core feature that needed to be rethought for a fundamentally different context. Web pages are dynamic, responsive, and structurally more complex than mobile screens.</p>
+          <p>I designed the end-to-end experience for creating, viewing, and acting on heatmap data for web. From analyzing page performance to element-level insights, all accessible with just a few clicks.</p>
         </section>
 
         <section class="cs-section">
-          <h2>Problem</h2>
-          <p>Translating heatmaps from mobile to web introduced new challenges:</p>
+          <h2>The Challenge</h2>
+          <p>Translating heatmaps from mobile to web wasn't a simple port. The problems ran deeper:</p>
           <ul>
             <li>Web pages have variable layouts across breakpoints and viewport sizes</li>
-            <li>Dynamic content (SPAs, lazy loading) complicates page capture</li>
-            <li>Users needed to specify which page variant to analyze</li>
-            <li>The creation flow needed to handle both simple and complex use cases</li>
+            <li>Dynamic content like SPAs and lazy-loaded elements complicate page capture</li>
+            <li>Users needed to understand page performance at a glance before diving into details</li>
+            <li>The system had to surface actionable insights, not just raw data</li>
           </ul>
         </section>
 
+        <figure class="cs-img">
+          <div class="cs-img-frame">
+            <div class="cs-img-frame-bar">
+              <span class="cs-img-frame-dot"></span>
+              <span class="cs-img-frame-dot"></span>
+              <span class="cs-img-frame-dot"></span>
+              <span class="cs-img-frame-url">app.uxcam.com / heatmaps / create</span>
+            </div>
+            <img src="../images/heatmap-2.png" alt="Session replay showing screen visits, page playback with timeline, click events, and activity log" loading="lazy">
+          </div>
+          <figcaption>Session replay: watch individual user sessions, track screen visits, and inspect click events with timestamped activity logs</figcaption>
+        </figure>
+
         <section class="cs-section">
-          <h2>Process</h2>
-          <p>I researched how other analytics tools handled web heatmaps, identified gaps, and mapped UXCam's unique advantages. Working with engineering, I defined what was technically feasible for the initial release and designed a progressive disclosure model that could grow over time.</p>
-          <p>Prototypes were tested with existing UXCam customers to validate the creation workflow and data visualization approach.</p>
+          <h2>What Users Can Do</h2>
+
+          <div class="cs-feature">
+            <h3>Understand page performance at a glance</h3>
+            <p>A clear, visual breakdown of interaction patterns, exit and bounce rates, time on page, and frustration signals. No digging through tables or dashboards.</p>
+          </div>
+
+          <div class="cs-feature">
+            <h3>See what captures user attention</h3>
+            <p>Uncover the most interacted elements on every page and identify optimization opportunities. Know which parts of your UI are working and which are being ignored.</p>
+          </div>
+
+          <div class="cs-feature">
+            <h3>Compare CTA performance</h3>
+            <p>Spot which buttons drive more conversions. Compare elements like "Talk to us" vs "Start trial" to make data-driven decisions about placement and copy.</p>
+          </div>
+
+          <div class="cs-feature">
+            <h3>Detect what users are missing</h3>
+            <p>Find out if important features or content are being completely overlooked. Act fast to fix visibility issues before they impact conversion.</p>
+          </div>
+        </section>
+
+        <figure class="cs-img">
+          <div class="cs-img-frame">
+            <div class="cs-img-frame-bar">
+              <span class="cs-img-frame-dot"></span>
+              <span class="cs-img-frame-dot"></span>
+              <span class="cs-img-frame-dot"></span>
+              <span class="cs-img-frame-url">app.uxcam.com / heatmaps / screen-visits</span>
+            </div>
+            <img src="../images/heatmap-3.png" alt="Screen visits table showing individual session data with timestamps, duration, previous and next screens, location, rage tap and dead click counts, and applied filters" loading="lazy">
+          </div>
+          <figcaption>Screen visits view: drill into individual sessions with navigation paths, rage taps, dead clicks, and filtered views for deeper analysis</figcaption>
+        </figure>
+
+        <section class="cs-section">
+          <div class="cs-feature">
+            <h3>Follow the user journey on every page</h3>
+            <p>See how users navigate from first to last click. Understand the journey through your UI, what they interact with first, what they do before leaving, and where the flow breaks down.</p>
+          </div>
+
+          <div class="cs-feature">
+            <h3>Surface hidden friction points</h3>
+            <p>Identify elements generating the most rage clicks and dead clicks. These frustration signals point directly to UX problems that quantitative data alone would miss.</p>
+          </div>
         </section>
 
         <section class="cs-section">
-          <h2>Solution</h2>
-          <p>The heatmap creation flow guides users through page selection, viewport configuration, and data range settings. The visualization supports click, scroll, and attention heatmaps with toggleable overlays. A responsive preview lets users switch between device sizes to see how interaction patterns differ.</p>
+          <h2>Design Decisions</h2>
+          <p>The design had to serve two audiences: product managers who want quick answers and analysts who need granular control. Progressive disclosure was central to the approach.</p>
+          <p>Page-level metrics are front and center for quick evaluation. One click deeper reveals element-level data with click rates, click-through rates, and the ability to watch specific sessions. Each layer adds detail without overwhelming the previous one.</p>
+          <p>Heatmaps can be created using the URL path automatically captured by UXCam, making setup instant. For teams that need more control, defining custom pages and properties enables deeper screen and heatmap analytics.</p>
         </section>
 
         <section class="cs-section">
           <h2>Outcome</h2>
-          <p>The web heatmap feature launched as a key differentiator for UXCam's web product. The creation workflow tested well with users, and the progressive complexity model allowed power users to access advanced configurations without overwhelming new users.</p>
+          <p>Heatmaps + Screen Analytics for Web shipped as a key differentiator in UXCam's web product. The feature is available to all plans with heatmap access in their subscription, extending naturally from mobile to web.</p>
+          <p>The progressive complexity model worked as intended — new users get value immediately from page-level views, while power users leverage the full depth of element-level analysis and journey mapping.</p>
         </section>
+
       </div>
 
       <nav class="cs-nav" aria-label="Case study navigation">
-        <a href="structural-model-shift.html" class="cs-nav-link">
-          <span class="cs-nav-label">Previous</span>
-          <span class="cs-nav-title">Structural model shift</span>
-        </a>
-        <a href="page-definition.html" class="cs-nav-link cs-nav-link--next">
+        <div></div>
+        <a href="signup-to-activation.html" class="cs-nav-link cs-nav-link--next">
           <span class="cs-nav-label">Next</span>
-          <span class="cs-nav-title">Page definition</span>
+          <span class="cs-nav-title">Signup-to-activation</span>
         </a>
       </nav>
     </div>
